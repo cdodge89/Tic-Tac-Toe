@@ -1,0 +1,44 @@
+
+.container h1{
+	font-size: 72px;
+	/*color: #C6CCD6;*/
+	color: #E56F50;
+}
+.square{
+	height: 217px;
+	width: 31%;
+	/*background: #ACB1BA;*/
+	/*background: #C6CCD6;*/
+	background: #C9DBE5;
+	float: left;
+	margin: 8px;
+	border-radius: 5px;
+	font-size: 160px;
+	text-align: center;
+}
+.square:hover{
+	background: #C6CCD6;
+}
+
+.row{
+	margin: 0 auto;
+}
+
+#board{
+	width: 700px;
+	margin-top: 50px;
+	text-align: center;
+}
+#restart{
+	width: 100%;
+	background-color: #E56F50;
+	font-size: 2em;
+}
+
+
+/*body{
+	background: #485563; 
+	background: -webkit-linear-gradient(to left, #485563 , #29323c);
+	background: linear-gradient(to left, #485563 , #29323c);
+}
+*/
