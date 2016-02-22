@@ -30,9 +30,14 @@
 	text-align: center;
 }
 #restart{
-	width: 100%;
+	width: 682px;
 	background-color: #E56F50;
 	font-size: 2em;
+	margin-top: 8px;
+}
+
+#restart:hover{
+	background-color: #C96146;
 }
 
 
