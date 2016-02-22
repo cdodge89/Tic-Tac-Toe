@@ -11,30 +11,35 @@ $(document).ready(function(){
 
 	emptySquares(squares);
 
-	$("body").on("click", function(){
-		if(winFlag){
-			emptySquares(squares);
-		}
-	});
+	// $("body").on("click", function(){
+	// 	if(winFlag){
+	// 		emptySquares(squares);
+	// 	}
+	// });
 	
 	$(".square").on("click", function(){
 		var id = this.id;
-		if(!squares[id[0]][id[1]].occupiedFlag){
-			if(xFlag){
-				$(this).text("X");
-				squares[id[0]][id[1]].value = "X";
-				squares[id[0]][id[1]].occupiedFlag = true;
-				xFlag = false;
-			} else{
-				$(this).text("O");
-				squares[id[0]][id[1]].value = "O";
-				squares[id[0]][id[1]].occupiedFlag = true;
-				xFlag = true;
+		if(winFlag){
+			emptySquares(squares);
+		} else{
+			if(!squares[id[0]][id[1]].occupiedFlag){
+				if(xFlag){
+					$(this).text("X");
+					squares[id[0]][id[1]].value = "X";
+					squares[id[0]][id[1]].occupiedFlag = true;
+					xFlag = false;
+				} else{
+					$(this).text("O");
+					squares[id[0]][id[1]].value = "O";
+					squares[id[0]][id[1]].occupiedFlag = true;
+					xFlag = true;
+				}
+				fillCount++;
+				console.log(fillCount);
 			}
-			fillCount++;
-			console.log(fillCount);
+			checkNext(squares, "X", id);
 		}
-		checkNext(squares, "X", id);
+		
 	});
 
 	$("#restart").on("click", function(){
